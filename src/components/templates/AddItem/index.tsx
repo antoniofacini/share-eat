@@ -50,7 +50,9 @@ const AddItem = ({ place }: IAddItem) => {
         label="Valor"
         placeholder="0,00"
         register={register('price')}
+        width="36"
         dataTestId="price"
+        prefix
       />
       <Input
         error={!!errors.description}
@@ -61,6 +63,7 @@ const AddItem = ({ place }: IAddItem) => {
         tip="*A descrição deve conter até 200 caracteres."
         register={register('description')}
         dataTestId="description"
+        text
       />
 
       <Button text="Salvar" type="submit" />
