@@ -7,7 +7,7 @@ interface IShowPlaces {
 const ShowPlaces = ({ places }: IShowPlaces) => (
   <div className="grid gap-4">
     <h1 className="font-bold text-yellow text-4xl">Lugares</h1>
-    <p className="text-white text-sm font-light">{places.length} lugares cadastrados</p>
+    <p className="text-white text-base font-light">{places.length} lugares cadastrados</p>
     <PlaceList places={places} />
   </div>
 )

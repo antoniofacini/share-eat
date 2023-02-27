@@ -55,7 +55,9 @@ const AddItem = ({ place }: IAddItem) => {
         tip="*A descrição deve conter até 200 caracteres."
         register={register('price')}
       />
-      <Button text="Salvar" type="submit" />
+      <div className="fixed bottom-8 w-10/12">
+        <Button text="Salvar" type="submit" />
+      </div>
     </form>
   )
 }

@@ -13,7 +13,7 @@ const Place: NextPage = ({ data }: any) => {
     >
       <div className="grid gap-4">
         <h1 className="font-bold text-yellow text-4xl">{data[0].name}</h1>
-        <p className="text-white text-sm font-light">{data[0].menuItems?.length} pratos</p>
+        <p className="text-white text-base font-light">{data[0].menuItems?.length} pratos</p>
         <ShowItems items={data[0].menuItems} />
         <div className="fixed bottom-8 right-8">
           <AddButton isVariant handler={() => push(`/${data[0].id}/adicionar-item`)} />
