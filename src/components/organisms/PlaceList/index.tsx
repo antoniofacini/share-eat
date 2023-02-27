@@ -14,7 +14,7 @@ const PlaceList = ({ places }: IPlaceList) => {
         <PlaceCard
           key={element.id}
           name={element.name}
-          description={element.menuItems.length + ' pratos'}
+          description={`${element.menuItems.length} pratos`}
           handleList={() => push(`/${element.id}`)}
           handleAdd={() => push(`/${element.id}/adicionar-item`)}
         />

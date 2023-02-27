@@ -4,7 +4,7 @@ interface IInput {
   fieldName: string
   label: string
   placeholder: string
-  prefix?: string
+  // prefix?: string
   tip?: string
   type?: string
   register: any
@@ -12,7 +12,7 @@ interface IInput {
 
 const Input = ({
   placeholder = 'Descrição',
-  prefix = '',
+  // prefix = '',
   type = 'text',
   fieldName = 'field',
   label = 'Descrição',
@@ -20,17 +20,24 @@ const Input = ({
   errorMessage = 'Verifique as informações inseridas',
   tip = '',
   register,
-}: IInput) => {
-  return (
-    <div className="grid gap-1">
-      <label htmlFor={fieldName} className="w-full text-start text-sm font-bold font-sans text-white-blur p-1">
-        {label}
-      </label>
-      <input id={fieldName} type={type} placeholder={placeholder} className="w-full rounded p-3" {...register} />
-      {tip && !error && <p className="text-white-blur font-light text-sm tracking-tighter">{tip}</p>}
-      {error && <p className="w-full text-start text-sm text-white p-1">{errorMessage}</p>}
-    </div>
-  )
-}
+}: IInput) => (
+  <div className="grid gap-1">
+    <label
+      htmlFor={fieldName}
+      className="w-full text-start text-sm font-bold font-sans text-white-blur p-1"
+    >
+      {label}
+    </label>
+    <input
+      id={fieldName}
+      type={type}
+      placeholder={placeholder}
+      className="w-full rounded p-3"
+      {...register}
+    />
+    {tip && !error && <p className="text-white-blur font-light text-sm tracking-tighter">{tip}</p>}
+    {error && <p className="w-full text-start text-sm text-white p-1">{errorMessage}</p>}
+  </div>
+)
 
 export default Input

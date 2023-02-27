@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2023: true,
+    es2022: true,
     node: true,
     jest: true,
   },
@@ -15,9 +15,7 @@ module.exports = {
     'airbnb',
     'plugin:@typescript-eslint/recommended',
     'plugin:cypress/recommended',
-    'prettier/@typescript-eslint',
-    'prettier/react',
-    'plugin:prettier/recommended',
+    'plugin:@next/next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -27,11 +25,13 @@ module.exports = {
     ecmaVersion: 14,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks', 'cypress', 'prettier'],
+  plugins: ['@typescript-eslint', 'react-hooks', 'cypress', 'prettier'],
   rules: {
+    'no-tabs': 0,
     'prettier/prettier': 'error',
     semi: 'off',
     'no-useless-escape': 0,
+    'comma-dangle': 'off',
     'react-hooks/exhaustive-deps': 0,
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.js', '.ts', '.tsx'] }],
     'react/display-name': 0,
@@ -61,9 +61,12 @@ module.exports = {
     'no-use-before-define': 0,
     'no-param-reassign': 0,
     'no-console': 0,
+    'object-curly-newline': 'off',
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
+    'react/function-component-definition': 'off',
     'react/jsx-wrap-multilines': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 }

@@ -6,5 +6,13 @@ export default {
   component: Input,
 } as Meta
 
-export const Default: Story = (args) => <Input {...args} />
-Default.args = {}
+export const Default: Story = (args) => (
+  <Input
+    error={true}
+    errorMessage={'Mensagem de erro'}
+    fieldName="Nome"
+    label="Nome do prato"
+    placeholder="Prato"
+    register={() => console.log('handle')}
+  />
+)

@@ -7,7 +7,12 @@ interface IPlaceCard {
   handleAdd: () => void
 }
 
-const PlaceCard = ({ name = 'Silva', description = '31 pratos', handleList, handleAdd }: IPlaceCard) => (
+const PlaceCard = ({
+  name = 'Silva',
+  description = '31 pratos',
+  handleList,
+  handleAdd,
+}: IPlaceCard) => (
   <div className="flex gap-5 items-center">
     <div className="bg-gray-dark p-4 rounded-md text-white w-full" onClick={handleList}>
       <p className="font-bold">{name}</p>

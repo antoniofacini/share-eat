@@ -2,18 +2,18 @@ import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'ne
 import PublicLayout from '../src/layouts/PublicLayout'
 import ShowPlaces from '../src/components/templates/ShowPlaces'
 
-const Home: NextPage = ({ data }: any) => {
-  return (
-    <PublicLayout canonicalUrl="/" description={'Share Eat'} indexable title="Share Eat">
-      <ShowPlaces places={data} />
-    </PublicLayout>
-  )
-}
+const Home: NextPage = ({ data }: any) => (
+  <PublicLayout canonicalUrl="/" description="Share Eat" indexable title="Share Eat">
+    <ShowPlaces places={data} />
+  </PublicLayout>
+)
 
 export default Home
 
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  const host = context.req.headers.host
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const { host } = context.req.headers
 
   const requestUrl = (): string => {
     if (process.env.NODE_ENV === 'development') {

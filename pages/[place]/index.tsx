@@ -25,8 +25,10 @@ const Place: NextPage = ({ data }: any) => {
 
 export default Place
 
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  const host = context.req.headers.host
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const { host } = context.req.headers
   const { place } = context.query
 
   const requestUrl = (): string => {

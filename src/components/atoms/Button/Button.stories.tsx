@@ -6,5 +6,4 @@ export default {
   component: Button,
 } as Meta
 
-export const Default: Story = (args) => <Button {...args} />
-Default.args = {}
+export const Default: Story = (args) => <Button text="Salvar" />

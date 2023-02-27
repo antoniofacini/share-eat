@@ -6,5 +6,6 @@ export default {
   component: AddButton,
 } as Meta
 
-export const Default: Story = (args) => <AddButton {...args} />
-Default.args = { isVariant: true }
+export const Default: Story = (args) => (
+  <AddButton {...args} handler={() => console.log('handle')} />
+)

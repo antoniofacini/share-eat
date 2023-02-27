@@ -6,5 +6,6 @@ export default {
   component: ArrowBack,
 } as Meta
 
-export const Default: Story = (args) => <ArrowBack {...args} />
-Default.args = {}
+export const Default: Story = (args) => (
+  <ArrowBack {...args} handler={() => console.log('handle')} />
+)
