@@ -1,10 +1,11 @@
-import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import { useRouter } from 'next/router'
 import PublicLayout from '../../src/layouts/PublicLayout'
 import { AddButton } from '../../src/components/atoms'
 import ShowItems from '../../src/components/templates/ShowItems'
+import { Places } from '../../types/apiTypes'
 
-const Place: NextPage = ({ data }: any) => {
+const Place = ({ data }: Places) => {
   const { push } = useRouter()
   return (
     <PublicLayout

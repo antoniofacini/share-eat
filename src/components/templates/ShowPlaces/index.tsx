@@ -1,7 +1,8 @@
 import { PlaceList } from '../../organisms'
+import { Place } from '../../../../types/apiTypes'
 
 interface IShowPlaces {
-  places: any
+  places: Place[]
 }
 
 const ShowPlaces = ({ places }: IShowPlaces) => (

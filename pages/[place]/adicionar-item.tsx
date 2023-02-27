@@ -1,8 +1,9 @@
 import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
 import PublicLayout from '../../src/layouts/PublicLayout'
 import AddItem from '../../src/components/templates/AddItem'
+import { Places } from '../../types/apiTypes'
 
-const AddItems: NextPage = ({ data }: any) => {
+const AddItems = ({ data }: Places) => {
   const { name } = data[0]
 
   return (
@@ -10,9 +11,7 @@ const AddItems: NextPage = ({ data }: any) => {
       description={`Share Eat- adicionar novo item ao estabelecimento ${name}`}
       title={`Share Eat - ${name}`}
     >
-      <div className="flex flex-col items-center justify-center">
-        <AddItem place={data} />
-      </div>
+      <AddItem place={data} />
     </PublicLayout>
   )
 }

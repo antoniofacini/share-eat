@@ -1,15 +1,16 @@
 import { useRouter } from 'next/router'
 import PlaceCard from '../../molecules/PlaceCard'
+import { Place } from '../../../../types/apiTypes'
 
 interface IPlaceList {
-  places: any
+  places: Place[]
 }
 
 const PlaceList = ({ places }: IPlaceList) => {
   const { push } = useRouter()
 
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-4 ">
       {places.map((element: any) => (
         <PlaceCard
           key={element.id}

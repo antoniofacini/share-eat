@@ -29,7 +29,9 @@ const PublicLayout = ({
         title={`${title || 'Share Eat'}`}
       />
       <Header path={pathname} returnFunction={back} />
-      <main className="w-10/12">{children}</main>
+      <main className="w-10/12  md:shadow-2xl md:p-6 md:rounded-lg md:m-auto md:w-6/12 lg:w-4/12 md:bg-gray">
+        {children}
+      </main>
     </div>
   )
 }

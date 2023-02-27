@@ -1,3 +1,5 @@
+import { FieldValues, UseFormRegister } from 'react-hook-form'
+
 interface IInput {
   error: boolean
   errorMessage: string | undefined
@@ -7,7 +9,7 @@ interface IInput {
   // prefix?: string
   tip?: string
   type?: string
-  register: any
+  register?: UseFormRegister<FieldValues>
 }
 
 const Input = ({

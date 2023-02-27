@@ -1,8 +1,9 @@
-import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import PublicLayout from '../src/layouts/PublicLayout'
 import ShowPlaces from '../src/components/templates/ShowPlaces'
+import { Places } from '../types/apiTypes'
 
-const Home: NextPage = ({ data }: any) => (
+const Home = ({ data }: Places) => (
   <PublicLayout canonicalUrl="/" description="Share Eat" indexable title="Share Eat">
     <ShowPlaces places={data} />
   </PublicLayout>

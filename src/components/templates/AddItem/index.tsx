@@ -2,9 +2,10 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { string, object } from 'yup'
 import { Button, Input } from '../../atoms'
+import { Place } from '../../../../types/apiTypes'
 
 interface IAddItem {
-  place: any
+  place: Place[]
 }
 
 interface INewItem {
@@ -28,7 +29,7 @@ const AddItem = ({ place }: IAddItem) => {
   const onSubmit = (NewItem: INewItem) => console.log(NewItem)
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4 ">
       <p className="font-bold text-yellow text-4xl">{place[0].name}</p>
       <Input
         error={!!errors.name}
@@ -55,9 +56,8 @@ const AddItem = ({ place }: IAddItem) => {
         tip="*A descrição deve conter até 200 caracteres."
         register={register('price')}
       />
-      <div className="fixed bottom-8 w-10/12">
-        <Button text="Salvar" type="submit" />
-      </div>
+
+      <Button text="Salvar" type="submit" />
     </form>
   )
 }
