@@ -8,8 +8,8 @@ const AddButton = ({ isVariant, handler }: IAddButton) => {
     <div className="w-fit p-4 border-black rounded-full bg-yellow" onClick={handler}>
       <svg
         aria-label="adicionar mais items"
-        width="25"
-        height="25"
+        width="30"
+        height="30"
         viewBox="0 0 20 20"
         fill="none"
         xmlns="https://www.w3.org/2000/svg"

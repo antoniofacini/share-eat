@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -33,8 +35,7 @@ module.exports = {
       8: '8px',
     },
     fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
-      sans_alternative: ['Nunito Sans', 'serif'],
+      sans: ['var(--font-poppins)', ...fontFamily.sans],
     },
     extend: {
       spacing: {

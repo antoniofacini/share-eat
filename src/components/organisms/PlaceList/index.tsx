@@ -6,7 +6,7 @@ interface IPlaceList {
 }
 
 const PlaceList = ({ places }: IPlaceList) => {
-  const router = useRouter()
+  const { push } = useRouter()
 
   return (
     <div className="grid gap-4">
@@ -15,8 +15,8 @@ const PlaceList = ({ places }: IPlaceList) => {
           key={element.id}
           name={element.name}
           description={element.menuItems.length + ' pratos'}
-          handleList={() => router.push(`/${element.id}`)}
-          handleAdd={() => router.push(`/${element.id}/adicionar-item`)}
+          handleList={() => push(`/${element.id}`)}
+          handleAdd={() => push(`/${element.id}/adicionar-item`)}
         />
       ))}
     </div>

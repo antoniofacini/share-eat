@@ -12,11 +12,11 @@ const ItemDescription = ({
   currency = 'R$',
 }: IItemDescription) => (
   <div className="bg-gray-dark p-5 rounded-md text-white border-l-6 border-yellow inline-grid grid-cols-3 gap-2">
-    <p>{name}</p>
-    <p className="col-start-3">
+    <p className="font-bold	col-span-2">{name}</p>
+    <p className="col-start-3 font-bold	">
       {currency} {price}
     </p>
-    <p className="col-span-3">{description}</p>
+    <p className="col-span-3 font-light">{description}</p>
   </div>
 )
 

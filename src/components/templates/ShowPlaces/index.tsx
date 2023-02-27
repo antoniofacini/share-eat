@@ -5,11 +5,10 @@ interface IShowPlaces {
 }
 
 const ShowPlaces = ({ places }: IShowPlaces) => {
-  //   console.log(places)
   return (
-    <div>
-      <p>Lugares</p>
-      <p>6 lugares cadastrados</p>
+    <div className="grid gap-4">
+      <h1 className="font-bold text-yellow text-4xl">Lugares</h1>
+      <p className="text-white text-sm font-light">{places.length} lugares cadastrados</p>
       <PlaceList places={places} />
     </div>
   )

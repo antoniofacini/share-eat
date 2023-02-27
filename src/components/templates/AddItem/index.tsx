@@ -1,5 +1,11 @@
 import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { string, object } from 'yup'
 import { Button, Input } from '../../atoms'
+
+interface IAddItem {
+  place: any
+}
 
 interface INewItem {
   name: string
@@ -7,19 +13,26 @@ interface INewItem {
   price: number
 }
 
-const AddItem = () => {
+const schema = object({
+  name: string().required('*Campo Obrigatório'),
+  description: string().required('*Campo Obrigatório'),
+  price: string().required('*Campo Obrigatório'),
+}).required()
+
+const AddItem = ({ place }: IAddItem) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<INewItem>()
+  } = useForm<INewItem>({ resolver: yupResolver(schema) })
   const onSubmit = (NewItem: INewItem) => console.log(NewItem)
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <p>Nome do Restaurante</p>
+    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
+      <p className="font-bold text-yellow text-4xl">{place[0].name}</p>
       <Input
         error={!!errors.name}
-        errorMessage="Erro"
+        errorMessage={errors.name?.message}
         fieldName="Nome"
         label="Nome do prato"
         placeholder="Prato"
@@ -27,18 +40,19 @@ const AddItem = () => {
       />
       <Input
         error={!!errors.description}
-        errorMessage="Erro"
+        errorMessage={errors.description?.message}
         fieldName="Nome"
-        label="Nome do prato"
-        placeholder="Prato"
+        label="Valor"
+        placeholder="0,00"
         register={register('description')}
       />
       <Input
         error={!!errors.price}
-        errorMessage="Erro"
+        errorMessage={errors.price?.message}
         fieldName="Nome"
-        label="Nome do prato"
-        placeholder="Prato"
+        label="Descrição do prato"
+        placeholder="Insira uma descrição"
+        tip="*A descrição deve conter até 200 caracteres."
         register={register('price')}
       />
       <Button text="Salvar" type="submit" />

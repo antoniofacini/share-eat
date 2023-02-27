@@ -1,7 +1,7 @@
 import NextHead from 'next/head'
 
 interface IHead {
-  canonicalUrl: string
+  canonicalUrl?: string
   description: string
   indexable: boolean
   title: string

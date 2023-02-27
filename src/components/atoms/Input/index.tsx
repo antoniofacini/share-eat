@@ -1,6 +1,6 @@
 interface IInput {
   error: boolean
-  errorMessage: string
+  errorMessage: string | undefined
   fieldName: string
   label: string
   placeholder: string
@@ -22,14 +22,14 @@ const Input = ({
   register,
 }: IInput) => {
   return (
-    <>
-      <label htmlFor={fieldName} className="w-full text-start text-md font-sans text-white-blur p-1">
+    <div className="grid gap-1">
+      <label htmlFor={fieldName} className="w-full text-start text-sm font-bold font-sans text-white-blur p-1">
         {label}
       </label>
       <input id={fieldName} type={type} placeholder={placeholder} className="w-full rounded p-3" {...register} />
-      {tip && <p className="text-white-blur">{tip}</p>}
+      {tip && !error && <p className="text-white-blur font-light text-sm tracking-tighter">{tip}</p>}
       {error && <p className="w-full text-start text-sm text-white p-1">{errorMessage}</p>}
-    </>
+    </div>
   )
 }
 
