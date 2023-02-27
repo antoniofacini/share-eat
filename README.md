@@ -1,27 +1,26 @@
-# Next.js + Tailwind CSS Example
+# Share Eat - Teste Técnico Wine Locals
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Projeto desenvolvido de acordo com o [Layout](https://xd.adobe.com/spec/d1218cae-a616-4c5c-4d3f-551f8e20124d-a710/screen/64129d9c-e23a-4560-81e2-31d8cf062496/specs/)
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## Getting Started into the Project
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+1. Clone o projeto utilizando `git clone git@github.com:antoniofacini/share-eat.git`
 
-## How to use
+2. Instale as dependências com o comando `yarn`
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+3. Rode o comando `yarn dev`
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+4. A aplicação estará acessível em `localhost:3000`
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+## Tecnologias utilizadas
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+*NextJs
+*React Hook Form
+*Yup
+*TailwindCss
+*ESLint
+*Prettier
+*Storybook
+*Jest
+\*Cypress
