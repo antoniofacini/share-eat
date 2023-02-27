@@ -14,7 +14,6 @@ interface IInput {
   register?: UseFormRegister<FieldValues> | any
   small?: boolean
   dataTestId?: string
-  width?: string
 }
 
 const Input = ({
@@ -26,7 +25,6 @@ const Input = ({
   label = 'Descrição',
   error = false,
   errorMessage = 'Verifique as informações inseridas',
-  width = 'full',
   small = false,
   text = false,
   tip = '',
@@ -60,7 +58,7 @@ const Input = ({
           id={fieldName}
           type={type}
           placeholder={placeholder}
-          className={`w-full rounded p-3 ${prefix && 'pl-10'} ${small && 'w-36'}`}
+          className={`rounded p-3 ${prefix && 'pl-10'} ${small ? 'w-36' : 'w-full'}`}
           data-test-id={dataTestId}
           {...register}
         />

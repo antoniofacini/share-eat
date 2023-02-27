@@ -50,7 +50,6 @@ const AddItem = ({ place }: IAddItem) => {
         label="Valor"
         placeholder="0,00"
         register={register('price')}
-        width="36"
         dataTestId="price"
         prefix
         small
