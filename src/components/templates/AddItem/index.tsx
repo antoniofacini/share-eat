@@ -53,6 +53,7 @@ const AddItem = ({ place }: IAddItem) => {
         width="36"
         dataTestId="price"
         prefix
+        small
       />
       <Input
         error={!!errors.description}

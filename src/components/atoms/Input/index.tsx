@@ -12,6 +12,7 @@ interface IInput {
   type?: string
   text?: boolean
   register?: UseFormRegister<FieldValues> | any
+  small?: boolean
   dataTestId?: string
   width?: string
 }
@@ -26,6 +27,7 @@ const Input = ({
   error = false,
   errorMessage = 'Verifique as informações inseridas',
   width = 'full',
+  small = false,
   text = false,
   tip = '',
   register,
@@ -58,7 +60,7 @@ const Input = ({
           id={fieldName}
           type={type}
           placeholder={placeholder}
-          className={`w-${width} rounded p-3 ${prefix && 'pl-10'}`}
+          className={`w-full rounded p-3 ${prefix && 'pl-10'} ${small && 'w-36'}`}
           data-test-id={dataTestId}
           {...register}
         />
