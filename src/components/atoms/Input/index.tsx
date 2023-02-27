@@ -9,7 +9,8 @@ interface IInput {
   // prefix?: string
   tip?: string
   type?: string
-  register?: UseFormRegister<FieldValues>
+  register?: UseFormRegister<FieldValues> | any
+  dataTestId?: string
 }
 
 const Input = ({
@@ -22,6 +23,7 @@ const Input = ({
   errorMessage = 'Verifique as informações inseridas',
   tip = '',
   register,
+  dataTestId,
 }: IInput) => (
   <div className="grid gap-1">
     <label
@@ -35,6 +37,7 @@ const Input = ({
       type={type}
       placeholder={placeholder}
       className="w-full rounded p-3"
+      data-test-id={dataTestId}
       {...register}
     />
     {tip && !error && <p className="text-white-blur font-light text-sm tracking-tighter">{tip}</p>}

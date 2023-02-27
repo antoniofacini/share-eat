@@ -5,12 +5,14 @@ export const mockData = [
     menuItems: [
       {
         name: 'Xis Bacon',
-        description: 'Pão, alface, tomate, carne, bacon, milho, ervilha, maionese, catchup, mostarda',
+        description:
+          'Pão, alface, tomate, carne, bacon, milho, ervilha, maionese, catchup, mostarda',
         price: 20.5,
       },
       {
         name: 'Xis Veg',
-        description: 'Pão, alface, tomate, bide de grão-de-bico, milho, ervilha, maionese, catchup, mostarda',
+        description:
+          'Pão, alface, tomate, bide de grão-de-bico, milho, ervilha, maionese, catchup, mostarda',
         price: 22.5,
       },
       {
@@ -36,7 +38,8 @@ export const mockData = [
       },
       {
         name: 'Café Mochaccino',
-        description: '70ml do melhor café expresso junto ao delicioso leite vaporizado e o melhor chocolate suíço',
+        description:
+          '70ml do melhor café expresso junto ao delicioso leite vaporizado e o melhor chocolate suíço',
         price: 10.5,
       },
     ],

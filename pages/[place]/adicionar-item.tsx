@@ -1,4 +1,4 @@
-import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import PublicLayout from '../../src/layouts/PublicLayout'
 import AddItem from '../../src/components/templates/AddItem'
 import { Places } from '../../types/apiTypes'

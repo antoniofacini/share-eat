@@ -8,7 +8,7 @@ export default {
 
 export const Default: Story = (args) => (
   <Input
-    error={true}
+    error
     errorMessage={'Mensagem de erro'}
     fieldName="Nome"
     label="Nome do prato"
